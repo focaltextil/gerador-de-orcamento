@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Header e Sidebar</title>
+    <title>Orçamentos - Home</title>
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/home.css">
 </head>
 
@@ -18,7 +20,7 @@
         </div>
 
         <div class="title">
-            
+
             <h2>Painel De Orçamentos</h2>
 
         </div>
@@ -26,39 +28,77 @@
 
         <div class="user">
 
-            <a href=""><img src="../assets/user-icon.png" alt="" id="user-icon"></a>
-
-            <a href=""><img src="../assets/doc-icon.png" alt="" id="doc-icon"></a>
-
             <a href="../index.html"><button id="exit-btn">Sair</button></a>
 
         </div>
 
-    
     </header>
 
-    <div class="container">
 
-        <div class="sidebar">
-            <select name="" id="">
-                <option value="Opcões">opção 1</option>
-                <option value="opção1">opção 2</option>
-                <option value="opção1">opção 3</option>
-                <option value="opção1">opção 4</option>
-                <option value="opção1">opção 5</option>
-                <option value="opção1">opção 6</option>
-                <option value="opção1">opção 7</option>
-                <option value="opção1">opção 8</option>
-            </select>
+    <section class="home-secction">
+
+        <div class="saudacao">
+
+            <h3>Bem Vindo, Fulano!</h3>
 
         </div>
 
-        <div class="main-content">
-            <h2>Bem-vindo à minha página!</h2>
-            <p>Este é o conteúdo principal da página.</p>
+        <div class="add-btn">
+
+            <img src="../assets/add-btn.png" alt="">
+
         </div>
-        
+
+    </section>
+
+    <div class="separador">
+
+        <hr>
+
     </div>
 
+    <div class="title2">
+
+        <h2>Meus Orçamentos</h2>
+
+    </div>
+
+    <section class="orcamentos">
+
+            <table class="tabela-orcamentos">
+                <tr>
+                    <th>Doc n°</th>
+                    <th>Data</th>
+                    <th>Cliente</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>15/01/2025</td>
+                    <td>Ricardo Paladino</td>
+                    <td>R$ 5.000,00</td>
+                    <td>Aprovado</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>18/01/2025</td>
+                    <td>Freeway Artefatos de Couro</td>
+                    <td>R$ 30.000,00</td>
+                    <td>Recusado</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>20/01/2025</td>
+                    <td>Fernanda Da Silva Sauro</td>
+                    <td>R$ 4.000,00</td>
+                    <td>Aguardando Aprovação</td>
+                </tr>
+            </table>
+
+    
+    </section>
+
 </body>
+
 </html>
