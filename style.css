@@ -1,0 +1,101 @@
+:root{
+    --bg: #ffffff;
+    --text-color: #848688;
+    --cor-btn: #0578BD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo img{
+    width: 7rem;
+    /* width: 10vw; */
+    margin: 0 0 1vw 0;
+}
+
+.logo p{
+    margin: 0.5vw;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 2vw auto;
+    gap: 0.5vw;
+    width: 20%;
+}
+
+#btn-login{
+    margin-top: 1vw;
+    background-color: var(--cor-btn);
+    font-size: 1.5vw;
+    border: none;
+    border-radius: 0.3vw;
+    color: var(--bg);
+    padding: 0.5vw;
+}
+
+form label{
+    color: var(--text-color);
+}
+
+form input{
+    outline: none;
+    border-radius: 0.3vw;
+    border-color: var(--text-color);
+    color: var(--cor-btn);
+    font-weight: bold;
+    font-size: 1vw;
+    padding: 0.3vw;
+}
+
+
+/* ---------------------------------------------------------- */
+
+@media screen and (max-width: 768px) { 
+    
+    form{
+        width: 50%;
+        text-align: center;
+        gap: 1vw;
+
+    }
+
+    form label{
+        font-size: 6vw;
+    }
+
+    form input{
+        font-size: 5vw;
+    }
+
+    #btn-login{
+        margin-top: 5vw;
+        font-size: 5vw;
+        padding: 1.5vw;
+    }
+
+}
