@@ -1,0 +1,60 @@
+:root{
+    --bg: #ffffff;
+    --text-color: #848688;
+    --cor-btn: #0578BD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 5vw;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+
+.title{
+    color: var(--text-color);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo img{
+    width: 3vw;
+}
+
+.logo p{
+    margin: 0.5vw;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#exit-btn{
+    background-color: var(--cor-btn);
+    width: 4vw;
+    color: var(--bg);
+    padding: 0.3vw;
+    border: none;
+    cursor: pointer;
+}

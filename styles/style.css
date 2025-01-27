@@ -39,6 +39,16 @@ body{
 }
 
 
+#exit-btn{
+    background-color: var(--cor-btn);
+    width: 4vw;
+    color: var(--bg);
+    padding: 0.3vw;
+    border: none;
+    cursor: pointer;
+}
+
+
 form{
     display: flex;
     justify-content: space-between;
@@ -65,7 +75,6 @@ form label{
 form input{
     outline: none;
     border-radius: 0.3vw;
-    border-color: var(--text-color);
     color: var(--cor-btn);
     font-weight: bold;
     font-size: 1vw;
