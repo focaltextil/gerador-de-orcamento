@@ -2,59 +2,117 @@
     --bg: #ffffff;
     --text-color: #848688;
     --cor-btn: #0578BD;
+    --text-size: 1vw;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    background: var(--bg);
+body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1vw 5vw;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-}
-
-
-.title{
+    width: 100%;
+    height: 60px;
     color: var(--text-color);
-}
-
-.logo{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 3vw 2vw;
 }
 
-.logo img{
-    width: 3vw;
+.logo img {
+    height: 40px;
 }
 
-.logo p{
-    margin: 0.5vw;
-    color: var(--text-color);
-    font-size: 2rem;
-    font-weight: bold;
+.title h2 {
+    font-size: 20px;
 }
 
-#exit-btn{
-    background-color: var(--cor-btn);
-    width: 4vw;
-    color: var(--bg);
-    padding: 0.3vw;
+.user button {
+    padding: 0.3vw 1vw;
+    border-radius: 0.3vw;
     border: none;
+    background-color: var(--cor-btn);
+    color: var(--bg);
     cursor: pointer;
+}
+
+hr{
+    margin: 2vw;
+}
+
+.container{
+    display: flex;
+    
+}
+
+.orcamento{
+    width: 55vw;
+    color: var(--text-color);
+    padding: 1vw;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.barra-lateral {
+    width: 27vw;
+    color: var(--text-color);
+    padding: 1vw;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.barra-lateral button{
+    font-size: var(--text-size);
+    justify-content: center;
+    margin-bottom: 1vw;
+    padding: 0.5vw;
+    width: 80%;
+    color: var(--bg);
+    background-color: var(--cor-btn);
+    border: none;
+    border-radius: 0.2vw;
+    display: none;
+}
+
+
+.barra-lateral h1 {
+    margin-bottom: 15px;
+}
+
+.barra-lateral select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-color: var(--text-color);
+    color: var(--text-color);
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-btn);
+    padding: 1vw;
+    margin-top: 3vw;
+    height: 10vw;
+}
+
+.content_footer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bg);
 }
