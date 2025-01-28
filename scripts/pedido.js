@@ -30,7 +30,6 @@ async function loadExcelData() {
             throw new Error('O CSV está vazio ou os dados não foram carregados corretamente.');
         }
 
-
         const headers = rows.shift();
 
 
@@ -42,9 +41,8 @@ async function loadExcelData() {
             return item;
         });
 
-        // Salva no sessionStorage
+
         sessionStorage.setItem('excelData', JSON.stringify(jsonData));
-        console.log('Dados salvos no sessionStorage.');
 
         return jsonData;
     } catch (error) {
@@ -56,7 +54,7 @@ async function loadExcelData() {
 
 loadExcelData()
     .then(jsonData => {
-        console.log('Dados JSON:', jsonData);
+
     })
     .catch(error => {
         console.error('Erro durante a execução:', error);
@@ -274,7 +272,43 @@ document.addEventListener("DOMContentLoaded", function () {
             const selectId = this.getAttribute("data-target");
             const select = document.getElementById(selectId);
             console.log(select.value);
+   
         });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const botoes = document.querySelectorAll(".add-btn");
+
+    if (botoes.length === 0) {
+        console.log("Nenhum botão encontrado.");
+        return;
+    }
+
+    botoes.forEach(botao => {
+        const selectId = botao.getAttribute("data-target");
+        const select = document.getElementById(selectId);
+
+        if (select) {
+    
+            select.addEventListener("change", function () {
+                const valorPadrao = select.options[0].value;
+
+                if (select.value === valorPadrao) {
+                    botao.style.display = "none";
+                } else {
+                    botao.style.display = "block";
+                }
+            });
+
+   
+            const valorPadrao = select.options[0].value;
+            if (select.value === valorPadrao) {
+                botao.style.display = "none";
+            } else {
+                botao.style.display = "block";
+            }
+        }
     });
 });
 

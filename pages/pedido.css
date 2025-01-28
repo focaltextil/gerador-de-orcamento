@@ -77,12 +77,11 @@ hr{
     justify-content: center;
     margin-bottom: 1vw;
     padding: 0.5vw;
-    width: 80%;
+    width: 100%;
     color: var(--bg);
     background-color: var(--cor-btn);
     border: none;
     border-radius: 0.2vw;
-    display: none;
 }
 
 
@@ -101,6 +100,7 @@ hr{
 
 footer{
     display: flex;
+    bottom: 0;
     flex-direction: column;
     background-color: var(--cor-btn);
     padding: 1vw;
