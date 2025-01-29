@@ -45,6 +45,34 @@ header {
     cursor: pointer;
 }
 
+.cliente{
+    width: 100w;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    align-items: center;
+
+}
+
+.cliente h3{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    color: var(--cor-btn);
+}
+
+
+.cliente_input{
+    outline: none;
+    width: 20vw;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    color: var(--cor-btn);
+    font-weight: bold;
+    font-size: var(--text-size);
+    text-align: center;
+}
+
 hr{
     margin: 2vw;
 }
@@ -55,10 +83,10 @@ hr{
 }
 
 .orcamento{
-    width: 55vw;
+    width: 70vw;
     color: var(--text-color);
     padding: 1vw;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     text-align: center;
 }
@@ -67,15 +95,16 @@ hr{
     width: 27vw;
     color: var(--text-color);
     padding: 1vw;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    text-align: center;
+    padding-left: 3vw;
 }
+
 
 .barra-lateral button{
     font-size: var(--text-size);
     justify-content: center;
-    margin-bottom: 1vw;
+    margin-bottom: 1.75vw;
     padding: 0.5vw;
     width: 100%;
     color: var(--bg);
@@ -97,7 +126,86 @@ hr{
     color: var(--text-color);
 }
 
+/* ----------------------------------------------------------------------- */
+.carrinho{
+    margin-top: 2vw;
+}
 
+.tabela-carrinho {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 150px;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.tabela-carrinho .coluna {
+    text-align: center;
+    padding: 10px;
+}
+
+.tabela-carrinho .coluna-item {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.tabela-carrinho .coluna-preco-tab1,
+.tabela-carrinho .coluna-preco-tab2 {
+    text-align: right;
+}
+
+.tabela-carrinho .coluna-remover {
+    text-align: center;
+}
+
+.tabela-carrinho .cabecalho {
+    margin-top: 5vw;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.remover-btn {
+    padding: 0.5vw;
+    width: 60%;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.remover-btn button:hover {
+    background-color: darkred;
+}
+
+.descontos{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.descontos button{
+    background-color: rgb(5, 209, 5);
+    color: var(--bg);
+    padding: 0.3vw;
+    border: none;
+    border-radius: 0.3vw;
+}
+
+.descontos input{
+    text-align: center;
+}
+
+.descontos input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* -------------------------------------------------------------- */
 footer{
     display: flex;
     bottom: 0;
@@ -116,3 +224,4 @@ footer{
     align-items: center;
     color: var(--bg);
 }
+

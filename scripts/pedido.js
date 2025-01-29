@@ -100,12 +100,17 @@ function setupDropdownBehavior() {
             botao.style.display = select.value === valorPadrao ? "none" : "block";
         }
 
-        // Adicionando evento de clique no botão para mostrar o valor selecionado
+
         botao.addEventListener("click", function () {
             const select = document.getElementById(botao.getAttribute("data-target"));
             if (select) {
                 console.log(select.value);
             }
+
+            select.value = select.options[0].value;
+
+            botao.style.display = "none" 
+
         });
     });
 }
