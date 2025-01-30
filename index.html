@@ -8,11 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <script src="./scripts/user.js"></script>
     <title>Tabela de Preços</title>
     
 </head>
 
 <body>
+
+    <section id="tela">
 
     <div class="logo">
 
@@ -22,17 +25,27 @@
 
     </div>
 
-    <form action="">
+    <dif class="form">
 
-        <label for="">Usuário</label>
+        <label>Usuário</label>
         <input type="text" id="user">
 
-        <label for="">Senha</label>
-        <input type="password">
+        <label>Senha</label>
+        <input type="password" id="password">
 
-        <button type="submit" id="btn-login">Entrar</button>
+        <button  id="btnlogin">Entrar</button>
 
-    </form>
+        <p class="msg"></p>
+
+    </div>
+
+</section>
+
+<section id="logged">
+
+    <iframe src="./pages/home.html" frameborder="0"></iframe>
+
+</section>
 
 </body>
 

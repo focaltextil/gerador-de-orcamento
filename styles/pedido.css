@@ -46,11 +46,11 @@ header {
 }
 
 .cliente{
-    width: 100w;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 2vw;
     align-items: center;
+    margin-top: 2vw;
 
 }
 
@@ -70,11 +70,16 @@ header {
     color: var(--cor-btn);
     font-weight: bold;
     font-size: var(--text-size);
-    text-align: center;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.separador{
+    margin: 2vw;
 }
 
 hr{
-    margin: 2vw;
+    margin: 0.5vw;
 }
 
 .container{
@@ -187,32 +192,24 @@ hr{
     width: 100%;
 }
 
-.descontos button{
-    background-color: rgb(5, 209, 5);
-    color: var(--bg);
-    padding: 0.3vw;
-    border: none;
-    border-radius: 0.3vw;
+.descontos-title{
+    margin: 1vw;
 }
 
 .descontos input{
     text-align: center;
 }
 
-.descontos input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
 
 /* -------------------------------------------------------------- */
 footer{
     display: flex;
     bottom: 0;
     flex-direction: column;
+    align-items: center;
     background-color: var(--cor-btn);
-    padding: 1vw;
-    margin-top: 3vw;
+    padding: 2vw;
+    margin-top: 2vw;
     height: 10vw;
 }
 

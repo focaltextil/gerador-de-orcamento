@@ -7,15 +7,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Função para configurar os campos de desconto
 function configurarDescontos() {
-    // Todos os campos de desconto
     const descontoInputs = ['desconto1', 'desconto2', 'desconto3'];
 
     descontoInputs.forEach(function(id) {
         const descontoInput = document.getElementById(id);
 
-        // Atualiza o carrinho sempre que o valor de um desconto mudar
+        descontoInput.addEventListener('keydown', function(event) {
+            const tecla = event.key;
+            const teclasPermitidas = ['ArrowUp', 'ArrowDown', 'Tab', 'ArrowLeft', 'ArrowRight'];
+
+            if (!teclasPermitidas.includes(tecla)) {
+                event.preventDefault();
+            }
+        });
+
         descontoInput.addEventListener("input", function() {
-            atualizarCarrinho();
+            aplicarDescontos();
         });
     });
 }
@@ -26,12 +33,10 @@ function aplicarDescontos() {
     const desconto2 = parseFloat(document.getElementById('desconto2').value) || 0;
     const desconto3 = parseFloat(document.getElementById('desconto3').value) || 0;
 
-    // Armazena os descontos no sessionStorage
     sessionStorage.setItem('desconto1', desconto1);
     sessionStorage.setItem('desconto2', desconto2);
     sessionStorage.setItem('desconto3', desconto3);
 
-    // Atualiza o carrinho com os novos descontos
     atualizarCarrinho();
 }
 
@@ -44,16 +49,13 @@ function obterDescontos() {
     };
 }
 
-
 function obterCarrinho() {
     return JSON.parse(sessionStorage.getItem('carrinho')) || [];
 }
 
-
 function salvarCarrinho(carrinho) {
     sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
-
 
 function configurarBotoes() {
     document.querySelectorAll(".add-btn").forEach(botao => {
@@ -75,7 +77,6 @@ function configurarBotoes() {
     });
 }
 
-
 function adicionarAoCarrinho(produtoSelecionado) {
     if (!produtoSelecionado) return;
 
@@ -91,7 +92,6 @@ function adicionarAoCarrinho(produtoSelecionado) {
     salvarCarrinho(carrinho);
     atualizarCarrinho();
 }
-
 
 function pegarPrecoPorDescricao(descricao) {
     let exceldata = JSON.parse(sessionStorage.getItem('excelData')) || [];
@@ -145,9 +145,7 @@ function atualizarCarrinho() {
         `;
     }).join('');
 
-
     const { desconto1, desconto2, desconto3 } = obterDescontos();
-
 
     let totalComDescontoTab1 = totalTab1 * (1 - desconto1 / 100);
     totalComDescontoTab1 = totalComDescontoTab1 * (1 - desconto2 / 100);
@@ -166,19 +164,18 @@ function atualizarCarrinho() {
             <div class="coluna"></div>
         </div>
 
-        <hr>
-
         <div class="tabela-carrinho">
             <div class="prod-desc"><strong>Total com Desconto</strong></div>
             <div class="coluna"><strong>R$ ${totalComDescontoTab1.toFixed(2).replace(".", ",")}</strong></div>
             <div class="coluna"><strong>R$ ${totalComDescontoTab2.toFixed(2).replace(".", ",")}</strong></div>
             <div class="coluna"></div>
         </div>
+
+        <hr>
     `;
 
     carrinhoDiv.innerHTML = carrinhoHtml;
 }
-
 
 function removerDoCarrinho(index) {
     let carrinho = obterCarrinho();
@@ -187,7 +184,6 @@ function removerDoCarrinho(index) {
     atualizarCarrinho();
 }
 
-
 function configurarCliente() {
     const clienteElement = document.querySelector(".cliente_input");
 
@@ -195,3 +191,8 @@ function configurarCliente() {
         sessionStorage.setItem("cliente", clienteElement.value);
     });
 }
+
+// -------------------------------------------------------------------------------------
+
+
+

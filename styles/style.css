@@ -18,6 +18,18 @@ body{
     height: 100vh;
 }
 
+
+#logged{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+#logged iframe{
+    width: 100vw;
+    height: 100vh;
+}
+
 .logo{
     display: flex;
     align-items: center;
@@ -49,7 +61,7 @@ body{
 }
 
 
-form{
+.form{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -58,7 +70,7 @@ form{
     width: 20%;
 }
 
-#btn-login{
+#btnlogin{
     margin-top: 1vw;
     background-color: var(--cor-btn);
     font-size: 1.5vw;
@@ -68,17 +80,24 @@ form{
     padding: 0.5vw;
 }
 
-form label{
+.form label{
     color: var(--text-color);
 }
 
-form input{
+.form input{
     outline: none;
     border-radius: 0.3vw;
     color: var(--cor-btn);
     font-weight: bold;
     font-size: 1vw;
     padding: 0.3vw;
+}
+
+.msg{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
 }
 
 

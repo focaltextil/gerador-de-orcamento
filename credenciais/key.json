@@ -1,0 +1,14 @@
+[
+    {
+        "user": "gerente",
+        "senha": "123",
+        "nike": "Ailton"
+    },
+
+    {
+        "user":"rep",
+        "senha":"456",
+        "nike": "Eduardo"
+    }
+
+]
