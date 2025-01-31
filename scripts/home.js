@@ -8,7 +8,5 @@ document.addEventListener("DOMContentLoaded", function () {
             window.parent.document.getElementById("tela").style.display = "block";
             window.parent.document.getElementById("logged").style.display = "none";
         });
-    } else {
-        console.error("Erro: Botão 'exit-btn' não encontrado no iframe!");
-    }
+    };
 });
