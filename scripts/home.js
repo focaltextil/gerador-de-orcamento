@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let nike = sessionStorage.getItem("nikename");
-    let nome = document.querySelector('.nikename');
-    let exit_btn = document.querySelector('#exit-btn');
+    let exit_btn = document.getElementById("exit-btn");
 
-    nome.innerHTML = `Bem Vindo ${nike}`;
-
-    exit_btn.addEventListener("click", function () {
-        
-        window.location.reload();
-
-    });
+    if (exit_btn) {
+        exit_btn.addEventListener("click", function () {
+            console.log("Cliquei no botão Sair");
+            
+            window.parent.document.getElementById("tela").style.display = "block";
+            window.parent.document.getElementById("logged").style.display = "none";
+        });
+    } else {
+        console.error("Erro: Botão 'exit-btn' não encontrado no iframe!");
+    }
 });

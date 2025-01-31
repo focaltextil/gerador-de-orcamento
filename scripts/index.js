@@ -6,15 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let logged = document.getElementById("logged");
     let logado = sessionStorage.getItem("logado");
     let msg = document.querySelector(".msg");
-    let nike = sessionStorage.getItem("nikename");
- 
-
     let credentials = [];
 
 // -------------------------------------------------------------------
 //LENDO DO ARQUIVO GAYZAO
 
-    fetch("/credenciais/key.json")
+    // fetch("/credenciais/key.json")
+    fetch("http://localhost:3000/users")
+
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Erro HTTP! Status: ${response.status}`);
@@ -36,18 +35,19 @@ document.addEventListener("DOMContentLoaded", function () {
         let username = user.value.trim();
         let userPassword = password.value.trim();
 
-        const userFound = credentials.find(cred => cred.user === username && cred.senha === userPassword);
+        const userFound = credentials.find(cred => cred.USUARIO === username && cred.PASSWORD === userPassword);
 
         if (userFound) {
             tela.style.display = "none";
             logged.style.display = "flex";
             sessionStorage.setItem("logado","ok");
-            sessionStorage.setItem("nikename", userFound.nike);
         } else {
             msg.style.color = "Red";
             msg.innerHTML = "Usuário ou senha incorretos";
+
         }
     });
+
 });
 
 

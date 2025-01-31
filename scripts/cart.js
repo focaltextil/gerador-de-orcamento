@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     configurarDescontos();
 });
 
-// Função para configurar os campos de desconto
+
 function configurarDescontos() {
     const descontoInputs = ['desconto1', 'desconto2', 'desconto3'];
 
@@ -27,7 +27,7 @@ function configurarDescontos() {
     });
 }
 
-// Função para aplicar os três descontos em cascata
+
 function aplicarDescontos() {
     const desconto1 = parseFloat(document.getElementById('desconto1').value) || 0;
     const desconto2 = parseFloat(document.getElementById('desconto2').value) || 0;
@@ -40,7 +40,7 @@ function aplicarDescontos() {
     atualizarCarrinho();
 }
 
-// Função para obter os descontos do sessionStorage
+
 function obterDescontos() {
     return {
         desconto1: parseFloat(sessionStorage.getItem('desconto1')) || 0,
