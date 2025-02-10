@@ -78,6 +78,7 @@ body{
     border-radius: 0.3vw;
     color: var(--bg);
     padding: 0.5vw;
+    cursor: pointer;
 }
 
 .form label{

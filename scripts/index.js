@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let credentials = [];
 
 // -------------------------------------------------------------------
-//LENDO DO ARQUIVO GAYZAO
+//OBTENDO DADOS DA API
 
     // fetch("/credenciais/key.json")
     fetch("http://localhost:3000/users")
