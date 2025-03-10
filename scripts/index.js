@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // -------------------------------------------------------------------
 //OBTENDO DADOS DA API
 
-    // fetch("/credenciais/key.json")
-    fetch("http://localhost:3000/users")
+    fetch("scripts/credenciais.json")
+    // fetch("http://localhost:3000/users")
 
         .then(response => {
             if (!response.ok) {
