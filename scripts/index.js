@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //OBTENDO DADOS DA API
 
     fetch("scripts/credenciais.json")
-    // fetch("http://localhost:3000/users")
 
         .then(response => {
             if (!response.ok) {
